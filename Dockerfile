@@ -38,7 +38,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/dist /usr/share/nginx/html
 
 # 暴露容器的 80 端口
-EXPOSE 80
+EXPOSE 7860
 
 # 容器启动时运行 Nginx 服务
 # -g 'daemon off;' 让 Nginx 在前台运行，这是 Docker 容器推荐的方式
